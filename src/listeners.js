@@ -1,4 +1,4 @@
-import { enjoy, song } from "./control.js";
+import { enjoy } from "./control.js";
 import { list } from "./song.js";
 
 const play = document.querySelector('#play');

@@ -39,7 +39,6 @@ export class playStart {
 
   playPrevious(){
     index -= 1;
-    console.log(index);
     if(index < 0) {
       index = list.length - 1;
       const play = document.querySelector('#play');
@@ -58,4 +57,4 @@ export class playStart {
 }
 
 
-export let index = list.length -1;
+export let index = 0;
