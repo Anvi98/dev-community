@@ -1,58 +1,61 @@
-// import {tooglePlay} from './tooglePlay.js';
-import { list } from './song.js';
 import './control.js';
+import { song } from './control.js';
+import { list } from './song.js';
+
+
 export class playStart {
 
-  playStart(){
-
+  playSong(){
     const play = document.querySelector('#play');
-    const classList = [...play.firstChild.classList];
-    let position = 0;
-    console.log(classList);
-    
-    let isPlaying = false;
-    const tooglePlay = (song, isPlaying) =>{
-      isPlaying ? song.pause() : song.play();
-    }
-    const song = new Audio(list[position]); 
+    play.firstChild.remove();
+    play.innerHTML = `<i class="fa fa-pause"></i>`;
+    song.play();
+  }
 
-    if(classList.includes('fa-play')){
-      isPlaying = false;
-      tooglePlay(song, isPlaying);
-      play.firstChild.remove();
-      play.innerHTML = `<i class="fa fa-pause"></i>`;
-      
-    } else {
-      isPlaying = true;
-      tooglePlay(song, isPlaying);
-      play.firstChild.remove();
-      play.innerHTML = `<i class="fa fa-play"></i>`;
-    }
-    song.addEventListener('ended', () => {
-      if((position+1) <= list.length){
-        song.src = list[position+1];
-        position += 1;
-        song.load();
-        song.play();
-      }
-
-    })
+  pauseSong(){
+    const play = document.querySelector('#play');
+    play.firstChild.remove();
+    play.innerHTML = `<i class="fa fa-play"></i>`;
+    song.pause();
   }
 
   playNext(){
-    const play = document.querySelector('#next');
-    tooglePlay(song, isPlaying);
+    index += 1;
+    if(index > list.length -1){
+      index = 0;
+      const play = document.querySelector('#play');
+      play.firstChild.remove();
+      play.innerHTML = `<i class="fa fa-pause"></i>`;
+      song.src = list[index];
+      song.play();
+    } else {
+      const play = document.querySelector('#play');
+      play.firstChild.remove();
+      play.innerHTML = `<i class="fa fa-pause"></i>`;
+      song.src = list[index];
+      song.play();
+    }
   }
 
   playPrevious(){
-
+    index -= 1;
+    console.log(index);
+    if(index < 0) {
+      index = list.length - 1;
+      const play = document.querySelector('#play');
+      play.firstChild.remove();
+      play.innerHTML = `<i class="fa fa-pause"></i>`;
+      song.src = list[index];
+      song.play();
+    } else {
+      const play = document.querySelector('#play');
+      play.firstChild.remove();
+      play.innerHTML = `<i class="fa fa-pause"></i>`;
+      song.src = list[index];
+      song.play(); 
+    }
   }
 }
-export let enjoy = new playStart();
 
-// myAudio.onplaying = function() {
-//   isPlaying = true;
-// };
-// myAudio.onpause = function() {
-//   isPlaying = false;
-// };
+
+export let index = list.length -1;
