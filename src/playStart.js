@@ -25,13 +25,13 @@ export class playStart {
       index = 0;
       const play = document.querySelector('#play');
       play.firstChild.remove();
-      play.innerHTML = `<i class="fa fa-pause"></i>`;
+      play.innerHTML = `<i class="fa fa-pause controller"></i>`;
       song.src = list[index];
       song.play();
     } else {
       const play = document.querySelector('#play');
       play.firstChild.remove();
-      play.innerHTML = `<i class="fa fa-pause"></i>`;
+      play.innerHTML = `<i class="fa fa-pause controller"></i>`;
       song.src = list[index];
       song.play();
     }
