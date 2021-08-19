@@ -72,3 +72,31 @@ span {
 .audio_controller  input {
   margin: 20px;
 }
+
+/* Right side discussion */
+
+.g-discussion {
+  color: #fff;
+  position: absolute;
+  width: 380px;
+  right: 0;
+  min-height: 88vh;
+  background-color: rgb(0, 0, 0, 0.8);
+  transition: right .5s;
+
+}
+
+.toogle {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  padding: 20px 10px;
+  background-color: rgb(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+}
+
+.hide {
+  right: -380px; 
+}
