@@ -8,14 +8,14 @@ export class playStart {
   playSong(){
     const play = document.querySelector('#play');
     play.firstChild.remove();
-    play.innerHTML = `<i class="fa fa-pause"></i>`;
+    play.innerHTML = `<i class="fa fa-pause controller"></i>`;
     song.play();
   }
 
   pauseSong(){
     const play = document.querySelector('#play');
     play.firstChild.remove();
-    play.innerHTML = `<i class="fa fa-play"></i>`;
+    play.innerHTML = `<i class="fa fa-play controller"></i>`;
     song.pause();
   }
 
