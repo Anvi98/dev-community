@@ -1,0 +1,29 @@
+{
+  "name": "interactive_audio_player",
+  "version": "1.0.0",
+  "description": "cool project",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon server.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anvi98/interactive_audio_player.git"
+  },
+  "keywords": [
+    "anvi98",
+    "audio"
+  ],
+  "author": "Anvi98",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anvi98/interactive_audio_player/issues"
+  },
+  "homepage": "https://github.com/Anvi98/interactive_audio_player#readme",
+  "dependencies": {
+    "socket.io": "^4.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

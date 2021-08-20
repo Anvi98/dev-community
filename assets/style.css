@@ -100,3 +100,14 @@ span {
 .hide {
   right: -380px; 
 }
+
+.rotated {
+  transform: rotate(90deg)
+}
+
+.message {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
