@@ -5,12 +5,14 @@ import '../components/App.css';
 
 const Home = () => {
 
+  // ***  From List of Images Switch Backrounds
+
   const listImages = ['pics/download.jpeg','pics/2.jpeg','pics/3.jpeg','pics/4.jpeg','pics/5.jpeg'];
 
   const getInitialTheme = () => {
     const temp = localStorage.getItem("position");
     let savedPosition = JSON.parse(temp);
-    if(savedPosition > listImages.length - 1 || savedPosition === null){
+    if(savedPosition === null || savedPosition > listImages.length - 1){
       return savedPosition = 0;
     } else {
       return savedPosition ;
@@ -20,22 +22,19 @@ const Home = () => {
   let image = getInitialTheme();
   const [theme, setTheme] = useState(listImages[image]);
 
-
+  // When event onClick is raised from Switcher Component, this function handle the background Switching
+  // And save the actual background to the localStorage.
   const handleBackground = () => {
-    console.log('clicked');
-    let position = JSON.parse(localStorage.getItem('position'));
-
-    if(position == null || position === listImages.length) {
-      position = 0;
-      setTheme(listImages[position]);
+    image += 1;
+    if(image == null || image === listImages.length) {
+      image = 0;
+      setTheme(listImages[image]);
     } else {
-      setTheme(listImages[position]);
+      setTheme(listImages[image]);
     }
-  
-    position += 1;
-  
-    localStorage.setItem('position', JSON.stringify(position));
+    localStorage.setItem('position', image);
   };
+  // ***---------------- 
 
   const im = {
     color: "red",
