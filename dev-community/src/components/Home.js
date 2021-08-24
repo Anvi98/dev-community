@@ -5,13 +5,21 @@ import '../components/App.css';
 
 const Home = () => {
 
-  // const getInitialTheme = () => {
-  //   const temp = JSON.parse(localStorage.getItem('theme'));
-  //   return temp || '../assets/pics/2.jpeg'; 
-  // }
-  const listImages = ['pics/2.jpeg','pics/3.jpeg','pics/4.jpeg','pics/5.jpeg'];
+  const listImages = ['pics/download.jpeg','pics/2.jpeg','pics/3.jpeg','pics/4.jpeg','pics/5.jpeg'];
 
-  const [theme, setTheme] = useState(listImages[0]);
+  const getInitialTheme = () => {
+    const temp = localStorage.getItem("position");
+    let savedPosition = JSON.parse(temp);
+    if(savedPosition > listImages.length - 1 || savedPosition === null){
+      return savedPosition = 0;
+    } else {
+      return savedPosition ;
+    }
+  };
+
+  let image = getInitialTheme();
+  const [theme, setTheme] = useState(listImages[image]);
+
 
   const handleBackground = () => {
     console.log('clicked');
