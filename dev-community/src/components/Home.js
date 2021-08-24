@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Switcher from './Switcher';
+import Audio from './Audio';
 import '../components/App.css';
 
 
@@ -46,6 +47,7 @@ const Home = () => {
     <div className='container' style={im}>
       <h1>Hello To our community!!</h1>
       <Switcher handleBackground={handleBackground}/>
+      <Audio />
     </div>
 
   );
