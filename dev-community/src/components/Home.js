@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Switcher from './Switcher';
 import Radio from './Radio';
+import Chat from './Chat';
 import '../components/App.css';
 
 
@@ -43,8 +44,8 @@ const Home = () => {
 
   return(
     <div className='container' style={im}>
-      <h1>Hello To our community!!</h1>
       <Switcher handleBackground={handleBackground}/>
+      <Chat />
       <Radio/>
     </div>
 

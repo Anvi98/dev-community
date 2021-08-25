@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { listSongs } from '../song';
 
+// Get the last music played from local storage and instanciate a new song object
 const getInitialIndexSong = () =>{
   const temp = localStorage.getItem("song");
   let song = JSON.parse(temp);
@@ -13,7 +14,9 @@ const getInitialIndexSong = () =>{
 
 let indexSong = getInitialIndexSong();
 const song = new Audio(listSongs[indexSong]);
+//--------------
 
+// Radio Component for Playing Background Sounds 
 const Radio = props => {
 
   const [states, setStates] = useState({
@@ -85,6 +88,9 @@ const Radio = props => {
       playSong();
     }
   };
+  
+  //Play Automatic Next Song
+  song.addEventListener('ended', playNext);
 
   return(
     <div className='audioContainer'>

@@ -20,15 +20,21 @@ span {
 
 .container {
   height: 100vh;
+  display: flex;
+
 }
 
 .switch {
-  padding: 13px 15px;
+  padding: 0 20px;
+  position: absolute;
+  bottom: 15%;
+  left: 1%;
   background-color: rgb(0, 0, 0, 0.5);
   border: 1px solid rgb(0, 0, 0);
   border-radius: 30px;
   color: #fff;
   font-size: 12px;
+  height: 35px;
   cursor: pointer;
 }
 
@@ -67,4 +73,25 @@ span {
   display: flex;
   color: #fff;
   font-size: 3em;
+}
+
+
+/* Chat Container */
+
+.chatContainer {
+  color: #fff;
+  position: absolute;
+  width: 380px;
+  right: 0;
+  height: 88vh;
+  overflow-y: auto;
+  background-color: rgb(0, 0, 0, 0.8);
+  transition: right .5s;
+}
+
+.chat-input {
+  bottom: 0;
+  width: 100%;
+  padding: 7px 10px;
+  position: sticky;
 }
