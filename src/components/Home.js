@@ -8,7 +8,7 @@ import '../components/App.css';
 const Home = () => {
 
   // ***  From List of Images Switch Backrounds
-  const listImages = ['pics/download.jpeg','pics/2.jpeg','pics/3.jpeg','pics/4.jpeg','pics/5.jpeg'];
+  const listImages = ['pics/0.jpeg','pics/2.jpeg','pics/3.jpeg','pics/4.jpeg','pics/5.jpeg','pics/6.jpeg','pics/7.jpeg','pics/8.jpeg','pics/9.jpeg', 'pics/10.jpeg', 'pics/11.jpeg', 'pics/12.jpeg'];
   const getInitialTheme = () => {
     const temp = localStorage.getItem("position");
     let savedPosition = JSON.parse(temp);

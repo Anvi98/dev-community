@@ -1,9 +1,11 @@
 import React from 'react';
+import Messages from '../Messages';
 
 const Chat = () => {
 
   return(
     <div className='chatContainer'>
+      <Messages />
       <h1>Hello To our community!!</h1>
       <h1>Hello To our community!!</h1>
       <h1>Hello To our community!!</h1>
@@ -27,7 +29,9 @@ const Chat = () => {
       <h1>Hello To our community!!</h1>
       <h1>Hello To our community!!</h1>
       <h1>Hello To our community!!</h1>
-    <input type="text" className='chat-input'/>
+      <form action="" id="send-container">
+        <input type="text" className='chat-input' />
+      </form>
     </div>
   );
 };
