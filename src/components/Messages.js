@@ -4,26 +4,40 @@ const Messages = props => {
 
   return(
     <div>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
+      <h1>SKdfdklnfsdlkln</h1>
       {props.chatProps.map((payload, index) =>{
         return(
-          <h3>{payload.message}</h3>
+          <h3 key={payload.id}>{payload.message}</h3>
         )
       })}
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
-      <h1>Hello To our community!!</h1>
     </div>
   );
 

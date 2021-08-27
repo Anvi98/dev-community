@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Switcher from './Switcher';
 import Radio from './Radio';
 import Chat from './Chat';
 import '../components/App.css';
+import { v4 as uuidv4 } from "uuid";
 
+// const defaultUser = {
+//   id: uuidv4(),
+//   name: 'Alex',
+//   email: 'abc@gmail.com'
+// };
+
+// localStorage.setItem('users', JSON.stringify(defaultUser));
 
 const Home = () => {
 
@@ -22,8 +30,6 @@ const Home = () => {
   let image = getInitialTheme();
   const [theme, setTheme] = useState(listImages[image]);
 
-  // When event onClick is raised from Switcher Component, this function handle the background Switching
-  // And save the actual background to the localStorage.
   const handleBackground = () => {
     image += 1;
     if(image == null || image === listImages.length) {
@@ -45,7 +51,7 @@ const Home = () => {
   return(
     <div className='container' style={im}>
       <Switcher handleBackground={handleBackground}/>
-      <Chat />
+      <Chat/>
       <Radio/>
     </div>
 

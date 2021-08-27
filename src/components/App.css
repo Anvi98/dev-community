@@ -83,15 +83,18 @@ span {
   position: absolute;
   width: 380px;
   right: 0;
-  height: 88vh;
   overflow-y: auto;
+  height: 84vh;
   background-color: rgb(0, 0, 0, 0.8);
   transition: right .5s;
 }
 
+
 .chat-input {
-  bottom: 0;
-  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 12%;
+  width: 380px;
   padding: 7px 10px;
-  position: sticky;
+
 }
